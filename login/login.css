@@ -5,4 +5,31 @@
     justify-content: space-around;
     align-items: center;
 }
+.imglogin{
+    width: 50%;
+}
+.iniciotitel{
+    color:rgba(14,110,254,255) ;
+    text-align: center;
+    margin: 4%;
+}
+.inputlogin{
+    border: 0;
+    background-color: aqua;
+    margin: 2%;
+    outline: 0;
+    outline-color: tomato;
+} 
 
+.loginfrom{
+    width: 30%;
+}
+.buttoninciar{
+    width: 100%;
+    margin: 2%;
+}
+.buttonregistro{
+    width: 100%;
+    margin: 2%;
+    
+}
