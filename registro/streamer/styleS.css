@@ -5,7 +5,9 @@ body{
 
 .header{
     position: absolute;
+    max-height: 100vh;
     background-color: #008080;
+    max-width: 100vh;
     width: 100%;
     height: 80px;
 }
@@ -39,10 +41,13 @@ body{
 
 .column1{
     position: absolute;
+    max-height: 100vh;
     top: 0px;
     left: 0px;
     margin-top: 80px;
-    width: 40%;
+    width: 100vh;
+    width: 450px;
+    height: 100%;
     background-color: #006065;
 }
 
@@ -54,10 +59,18 @@ body{
 
 .column2{
     position: absolute;
+    max-height: 100vh;
     margin-top: 80px;
-    margin-left: 40%;
-    width: 60%;
-    background-color: whitesmoke;
+    margin-left: 450px;
+    width: 100vh;
+    width: 550px;
+    background-color: beige;
+}
+
+.column3{
+    position: absolute;
+    max-height: 100vh;
+    margin-top: 80pxs;
 }
 
 .textTitle{
@@ -82,6 +95,7 @@ body{
     font-family: 'Century Gothic', normal;
     font-weight: bold;
     color: black;
+    margin-left: 30px;
 }
 
 #fontFamilyVBlack{
@@ -136,7 +150,7 @@ input, textarea{
 }
 
 label{
-    margin-left: 40px;
+    text-align: center;
 }
 
 .marginTop{
@@ -147,3 +161,61 @@ label{
     text-align: center;
 }
 
+form input[type="email"]{
+    width: 350px;
+    padding: 1% 1%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    text-align: center;
+    display: inline-block;   
+}
+
+form input[type="text"]{
+    width: 350px;
+    background-color: transparent;
+    padding: 1% 1%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: black;
+    text-align: center;
+    border-radius: 5px;
+}
+
+form input[type="password"]{
+    width: 350px;
+    background-color: transparent;
+    padding: 1% 1%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: black;
+    text-align: left;
+    border-radius: 5px;
+}
+
+form input[type="tel"]{
+    width: 350px;
+    padding: 1% 1%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: black;
+}
+
+form input[type="date"]{
+    width: 250px;
+    padding: 1% 1%;
+    text-align: center;
+    border-color: black;
+    border-radius: 10px;
+}
+
+.select{
+    border: 2px solid black;
+    padding: 1% 1%;
+    text-align: center;
+    margin-left: 60px;
+    border-radius: 5px;
+}
