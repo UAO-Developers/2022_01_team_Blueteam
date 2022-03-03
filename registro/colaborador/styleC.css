@@ -247,17 +247,3 @@ form input[type="date"]{
     position: relative;
     text-align: center;
 }
-
-.marginUrl{
-    margin-top: 1%;
-}
-
-.centerDiv3{
-    text-align: center;
-    margin-top: 20%;
-}
-
-#letraDiv3{
-    font-family: 'Century Gothic', normal;
-    font-weight: bold;
-}
