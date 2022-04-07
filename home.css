@@ -37,6 +37,20 @@ h1{
     padding: 0 25vw;
 }
 
+.h2pru{    
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 58px;
+/* identical to box height */
+
+    text-align: center;
+
+    color: #0D6CF7;
+
+}
+
 .titulo p{
     margin-top: 24px;
     
