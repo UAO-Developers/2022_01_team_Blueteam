@@ -42,78 +42,65 @@
     <div class="container">
       <main>
           <div class="py-5 text-center">
-              <h2>Streamer</h2>
-              <p class="lead">Sitio web para la administración de productos.</p>
+              <h2>Eventos</h2>
+              <p class="lead">Administración de Eventos</p>
           </div>
           <div class="row g-5">
               <div class="col-md-7 col-lg-8">
                   <h4 class="d-flex justify-content-between align-items-center mb-3">
                       <span class="text-primary">Eventos registrados</span>
                   </h4>
-                  <ul class="list-group mb-3" id="lista_productos">
+                  <table class="table col-12 table-dark">
+                    <thead>
+                      <tr>
+                        <th scope="col">Numero</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Fecha</th>
+                        <th scope="col">Participantes</th>
+                        <th scope="col">Acciones</th>
+                      </tr>
+                    </thead>
+                    <tbody id="personajes">
                       
-                  </ul>
+                    </tbody>
+                  </table>
               </div>
               <div class="col-md-5 col-lg-4 container-registro">
                   <h4 class="mb-3">Añadir evento</h4>
                   
                       <div class="row g-3">
                           <div class="col-12">
-                              <label for="nombre" class="form-label">Nombre</label>
+                              <label for="nombre" class="form-label">Nombre del evento</label>
                               <input type="text" class="form-control" id="nombre" name="nombre" placeholder=""
                                   value="" required="">
                               <div class="invalid-feedback">
-                                  Nombre es requerido
+                                    Nombre del evento es requerido
                               </div>
                           </div>
 
                           <div class="col-12">
-                              <label for="correo" class="form-label">Correo</label>
-                              <input type="text" class="form-control" id="correo" name="correo"
+                              <label for="info" class="form-label">Información del evento</label>
+                              <input type="text" class="form-control" id="info" name="info"
                                   placeholder="" value="" required="">
                               <div class="invalid-feedback">
-                                  Correo es requerido
+                                    Información del evento es requerido
                               </div>
                           </div>
 
                           <div class="col-12">
-                              <label for="contrasena" class="form-label">Contraseña</label>
-                              <input type="number" class="form-control" id="contrasena" name="contrasena" placeholder=""
+                              <label for="participantes" class="form-label">Participantes</label>
+                              <input type="number" class="form-control" id="participantes" name="participantes" placeholder=""
                                   value="" required="">
                               <div class="invalid-feedback">
-                                  Contraseña es requerido
+                                    Participantes es requerido
                               </div>
                           </div>
                           <div class="col-12">
-                              <label for="edad" class="form-label">Edad</label>
-                              <input type="number" class="form-control" id="edad" name="edad" placeholder=""
+                              <label for="notas" class="form-label">Notas</label>
+                              <input type="text" class="form-control" id="notas" name="notas" placeholder=""
                                   value="" required="">
                               <div class="invalid-feedback">
-                                  Edad es requerido
-                              </div>
-                          </div>
-                          <div class="col-12">
-                              <label for="pais" class="form-label">Pais</label>
-                              <input type="text" class="form-control" id="pais" name="pais" placeholder=""
-                                  value="" required="">
-                              <div class="invalid-feedback">
-                                  Pais es requerido
-                              </div>
-                          </div>
-                          <div class="col-12">
-                              <label for="foto_perfil" class="form-label">Foto Perfil</label>
-                              <input type="text" class="form-control" id="foto_perfil" name="foto_perfil" placeholder=""
-                                  value="" required="">
-                              <div class="invalid-feedback">
-                                  Foto Perfil es requerido
-                              </div>
-                          </div>
-                          <div class="col-12">
-                              <label for="datos_perfil" class="form-label">Datos Perfil</label>
-                              <input type="text" class="form-control" id="datos_perfil" name="datos_perfil" placeholder=""
-                                  value="" required="">
-                              <div class="invalid-feedback">
-                                  Datos Perfil es requerido
+                                    Notas es requerido
                               </div>
                           </div>
                       </div>
@@ -135,6 +122,6 @@
       crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="./scripts/products.js"></script>
+  <script src="../EventoStreamer/EventoStreamer.js"></script>
 </body>
 </html>
