@@ -122,10 +122,3 @@ h3{
 .width{
     width: 60%;
 }
-
-.posit{
-    width: 100%;
-    max-width: 60px;
-    position: absolute;
-    text-align: center;
-}
