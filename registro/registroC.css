@@ -36,10 +36,6 @@ header{
     color: #0D6CF7;
 }
 
-.circulo{
-    border-radius: 50%;
-}
-
 .imgH{
     max-width: 100vh;
     width: 40px;
