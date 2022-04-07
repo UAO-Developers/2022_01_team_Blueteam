@@ -92,3 +92,15 @@ h1{
 .card{
     margin: 50px 100px;
 }
+
+.circulo{
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+}
+
+.botonlarge{
+    max-width: 100vh;
+    width: 35%;
+}
