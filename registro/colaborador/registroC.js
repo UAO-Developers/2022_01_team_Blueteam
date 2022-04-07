@@ -1,0 +1,7 @@
+let txt_nombre = $("nombre").val();
+let txt_email = $("correo").val();
+let txt_contraseña = $("contraseña").val();
+let txt_edad = $("edad").val();
+let txt_pais = $("pais").val();
+let txt_streamer = $("streamer").val();
+let txt_foto = $("foto_perfil").val();

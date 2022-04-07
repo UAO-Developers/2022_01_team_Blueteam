@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/Inter-Bold.woff2") format("woff2"),
+         url("../fonts/Inter-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style:  normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("../fonts/Inter-Light.woff2") format("woff2"),
+         url("../fonts/Inter-Light.woff") format("woff");
+}
+
+body{
+    margin: 0;
+    background-color: black;
+    background-image: url(../colaborador/img/pexels-matheus-bertelli-3856026.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.registrate{
+    max-width: 100vmax;
+    width: 450px;
+    height: 50px;
+    background: #212529;
+    border-radius: 9px 9px 0px 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0, -50%);
+}
+
+.centrar{
+    position: absolute;
+    text-align: center;
+}
+
+.registro{
+    position: absolute;
+    text-align: center;
+    max-width: 100vmax;
+    width: 450px;
+    height: 600px;
+    background: #FEFEFE;
+    border-radius: 9px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+* {
+    font-family: 'Inter';
+}
+
+h2{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 44px;
+/* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+}
+
+h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 58px;
+/* identical to box height */
+
+    text-align: center;
+
+    color: #0D6CF7;
+}
+
+.centrar{
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.widthInput{
+    width: 90%;
+    margin-left: 1.5rem;
+}
+
+.width{
+    width: 60%;
+}
