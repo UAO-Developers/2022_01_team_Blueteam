@@ -3,8 +3,8 @@
     font-style:  normal;
     font-weight: 700;
     font-display: swap;
-    src: url("../fonts/Inter-Bold.woff2") format("woff2"),
-         url("../fonts/Inter-Bold.woff") format("woff");
+    src: url("../assets/fonts/Inter-Bold.woff2") format("woff2"),
+         url("../assets/fonts/Inter-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -12,14 +12,14 @@
     font-style:  normal;
     font-weight: 300;
     font-display: swap;
-    src: url("../fonts/Inter-Light.woff2") format("woff2"),
-         url("../fonts/Inter-Light.woff") format("woff");
+    src: url("../assets/fonts/Inter-Light.woff2") format("woff2"),
+         url("../assets/fonts/Inter-Light.woff") format("woff");
 }
 
 body{
     margin: 0;
     background-color: black;
-    background-image: url(../colaborador/img/pexels-matheus-bertelli-3856026.jpg);
+    background-image: url(../assets/pexels-matheus-bertelli-3856026.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -29,11 +29,20 @@ header{
     background-color: transparent;
     height: 50px;
     width: 100%;
+    border: 0;
+}
+
+.color{
+    color: #0D6CF7;
+}
+
+.circulo{
+    border-radius: 50%;
 }
 
 .imgH{
     max-width: 100vh;
-    width: 50px;
+    width: 40px;
     margin-left: 1rem;
 }
 
@@ -112,4 +121,11 @@ h3{
 
 .width{
     width: 60%;
+}
+
+.posit{
+    width: 100%;
+    max-width: 60px;
+    position: absolute;
+    text-align: center;
 }
