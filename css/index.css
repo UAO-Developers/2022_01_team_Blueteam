@@ -1,31 +1,9 @@
-@font-face {
-    font-family: 'Inter';
-    font-style:  normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url("assets/fonts/Inter-Bold.woff2") format("woff2"),
-         url("assets/fonts/Inter-Bold.woff") format("woff");
-}
-
-@font-face {
-    font-family: 'Inter';
-    font-style:  normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url("assets/fonts/Inter-Light.woff2") format("woff2"),
-         url("assets/fonts/Inter-Light.woff") format("woff");
-}
-
 .presentation{
     background-image: url(assets/pexels-matheus-bertelli-3856026.jpg);
     background-size:cover;
     background-position: center;
     background-repeat: no-repeat;
     padding-top: 100px;
-}
-
-* {
-    font-family: 'Inter';
 }
 
 h1{
@@ -39,7 +17,6 @@ h1{
 
 .titulo p{
     margin-top: 24px;
-    
     color: rgb(216, 216, 216);
     font-weight: 300;
     font-size: 28px;
