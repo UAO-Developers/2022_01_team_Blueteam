@@ -52,7 +52,7 @@ function cargar() {
                 const formatDate = (date)=>{
                     let formatted_date = date.getFullYear() + "-0" + date.getDate() + "-0" + (date.getMonth() + 1)
                      return formatted_date;
-                    }
+                }
 
                 date = new Date(element.fecha);
                 console.log(formatDate(date));
