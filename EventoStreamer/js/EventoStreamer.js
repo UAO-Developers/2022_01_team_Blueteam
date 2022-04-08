@@ -4,6 +4,7 @@ function registrar() {
     let txt_descripcion = $("#descripcion").val();
     let txt_imagen = "../assets/img/123.jpg";
     let txt_streamer = $("#streamer").val();
+    let txt_estado = "Sin lanzar";
     $.ajax({
         url:'https://pruebauao.azurewebsites.net/eventos',   // url
         dataType: 'text/json',
@@ -15,6 +16,7 @@ function registrar() {
             descripcion : txt_descripcion,
             imagen: txt_imagen,
             streamer: txt_streamer,
+            estado: txt_estado,
         }, // data to be submit
         success: function( data, textStatus, jQxhr ){
             alert("Guardado!!!");
