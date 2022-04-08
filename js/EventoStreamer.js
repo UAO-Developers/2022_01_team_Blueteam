@@ -40,8 +40,12 @@ function cargar() {
             data[0].forEach(element => {
                 console.log(element);
                 i++;
+                const formatDate = (date)=>{
+                    let formatted_date = date.getFullYear() + "-0" + date.getDate() + "-0" + (date.getMonth() + 1)
+                    return formatted_date;
+                }
                 html += '<tr id="' + element.nombre + '"><th scope="row">' + i
-                + '</th> <td>' + element.nombre + '</td> <td>' + element.fecha + '</td> <td>' + element.participantes + '</td>' +
+                + '</th> <td>' + element.nombre + '</td> <td>' + formatDate(new Date(element.fecha)) + '</td> <td>' + element.participantes + '</td>' +
                 ' <td> <button class="btn btn-secondary btn-lg" onclick="">Eliminar</button> <button class="btn btn-primary btn-lg" onclick="">Editar</button> </td></tr>';
             $("#personajes").html(html);
             });

@@ -6,7 +6,7 @@ function registrar() {
     let txt_contrasena = $("#contrasena").val();
     let txt_edad = $("#edad").val();
     let txt_pais = $("#pais").val();
-    
+
     $.ajax({
         url:'https://pruebauao.azurewebsites.net/streamers',   // url
         dataType: 'text/json',
@@ -26,11 +26,7 @@ function registrar() {
         },
         error: function( jqXhr, textStatus, errorThrown ){
         }
-
-        
     });
-    
-    
 }
 
 function correcto(a){
