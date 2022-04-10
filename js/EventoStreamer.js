@@ -1,53 +1,8 @@
 function registrar() {
-    var file = $('#imagen')[0].files[0];
 
-    var name = file.name;
-    var form_data = new FormData();
-    var ext = name.split('.').pop().toLowerCase();
-
-    if(jQuery.inArray(ext, ['gif','png','jpg','jpeg']) == -1)
-    {
-        alert("Invalid Image File");
-    }
-    else{
-        var oFReader = new FileReader();
-        oFReader.readAsDataURL(file);
-        var f = file;
-        var fsize = f.size||f.fileSize;
-        if(fsize > 2000000)
-        {
-            alert("Image File Size is very big");
-        }
-        else
-        {
-            form_data.append("file", file);
-            $.ajax({
-                url:"upload.php",
-                method:"POST",
-                data: form_data,
-                contentType: false,
-                cache: false,
-                processData: false,
-                headers: {
-                    'Access-Control-Allow-Origin': '*'
-                },
-                beforeSend:function(){
-                    $('#uploaded_image').html("<label class='text-success'>Image Uploading...</label>");
-                },
-                success:function(data)
-                {
-                    $('#uploaded_image').html(data);
-                }
-                ,error: function(ts)
-                {
-                    alert("error:" + ts.responseText);
-                }
-            });
-        }
-    }
-
-
-
+    $("form").submit(function(event) {
+        event.preventDefault();
+    })
 
     let txt_nombre = $("#nombre").val();
     let txt_fecha = $("#fecha").val();

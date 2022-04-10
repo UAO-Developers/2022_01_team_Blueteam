@@ -72,7 +72,7 @@
                     </tbody>
                   </table>
               </div>
-              <div class="col-md-8 col-lg-4 container-registro">
+              <form class="col-md-8 col-lg-4 container-registro" action="upload.php" method="post">
                   <h4 class="mb-3">Añadir evento</h4>
 
                       <div class="row g-3">
@@ -106,7 +106,7 @@
                             <div class="col-12">
                               <label for="descripcion" class="form-label">Descripción</label>
                               <input type="file" class="form-control" id="imagen" name="imagen"
-                                    placeholder="" value="" required="">
+                                    placeholder="" value="">
                               <div class="invalid-feedback">
                               </div>
                           </div>
@@ -115,10 +115,10 @@
 
                       <hr class="my-4">
 
-                      <button class="w-100 btn btn-primary btn-lg" onclick="registrar()">Registrar</button>
+                      <button type="submit" class="w-100 btn btn-primary btn-lg" onclick="registrar()">Registrar</button>
 
               </div>
-          </div>
+          </form>
       </main>
 
   </div>
