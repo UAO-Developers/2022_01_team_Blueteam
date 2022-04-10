@@ -14,7 +14,7 @@ function solicitar() {
         success: function( data, textStatus, jQxhr ){
             console.log( data );
             if(data.message == "Correcto"){
-                comprobar(data.nombre);
+                logear(data.nombre);
             } else{
                 if(data.message == "contrasena"){
                     mostrarError("Contraseña incorrecta");
@@ -29,7 +29,7 @@ function solicitar() {
     });
 }
 
-function comprobar(nombre){
+function logear(nombre){
     localStorage.user_name = nombre;
     localStorage.logeado = true;
     localStorage.tipoCuenta = "streamer";
@@ -41,5 +41,29 @@ function mostrarError(error){
     console.log(error);
 }
 
+function tipoDeCuenta(cuenta){
+    if(cuenta == "colaborador"){
+        $("#Colaborador").prop( "checked", true );
+        $("#Streamer").prop( "checked", false );
+        $("#labelStreamer").css('color', 'black');
+        $("#labelColaborador").css('color', 'white');
+    } else {
+        $("#Colaborador").prop( "checked", false );
+        $("#Streamer").prop( "checked", true );
+        $("#labelStreamer").css('color', 'white');
+        $("#labelColaborador").css('color', 'black');
+    }
+}
+
 $(document).ready(function(){
+});
+
+function deslogearse(){
+    localStorage.clear();
+}
+
+$('.inputlogin').bind('keypress', function (e) {
+    if (e.key === 'Enter') {
+        solicitar();
+    }
 });
