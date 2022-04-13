@@ -96,7 +96,7 @@ function eliminar(valor){
 
 function editar(id_evento){
     localStorage.id = id_evento;
-    window.location.href = 'Evento.html';
+    window.location.href = 'evento.html';
 }
 
 function lanzar(id_evento){
