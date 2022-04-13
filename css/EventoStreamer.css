@@ -19,7 +19,7 @@
     margin: 2%;
     outline: 0;
     outline-color: tomato;
-} 
+}
 
 .loginfrom{
     width: 30%;
@@ -31,11 +31,23 @@
 .buttonregistro{
     width: 100%;
     margin: 2%;
-    
 }
+
+.tablas{
+    padding: 90px;
+}
+
 .container-registro{
     background-color:white;
     padding-top: 20px;
     padding-bottom: 20px;
+    width: 30%;
+    min-width: 370px;
+    max-width: 450px;
+
+    margin-left: 2%;
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 

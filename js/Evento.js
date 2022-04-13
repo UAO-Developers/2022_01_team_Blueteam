@@ -2,8 +2,7 @@ function actualizar() {
     let txt_nombre = $("#nombre").val();
     let txt_fecha = $("#fecha").val();
     let txt_descripcion = $("#descripcion").val();
-    let txt_imagen = "../assets/img/123.jpg";
-    let txt_streamer = $("#streamer").val();
+
     $.ajax({
         url:'https://pruebauao.azurewebsites.net/eventos/_id/' + localStorage.id,   // url
         dataType: 'text/json',
@@ -13,8 +12,6 @@ function actualizar() {
             nombre: txt_nombre,
             fecha: txt_fecha,
             descripcion : txt_descripcion,
-            imagen: txt_imagen,
-            streamer: txt_streamer,
         }, // data to be submit
         success: function( data, textStatus, jQxhr ){
             alert("Guardado!!!");
@@ -50,7 +47,7 @@ function cargar() {
                 }
 
                 const formatDate = (date)=>{
-                    let formatted_date = date.getFullYear() + "-0" + date.getDate() + "-0" + (date.getMonth() + 1)
+                    let formatted_date = date.getFullYear() + "-0" + (date.getMonth() + 1) + "-" + (date.getDate() + 1)
                     return formatted_date;
                 }
 
@@ -59,9 +56,8 @@ function cargar() {
                 $("#nombre").val(element.nombre);
                 $("#fecha").val(formatDate(date));
                 $("#descripcion").val(element.descripcion);
-                console.log($( "#participantes" ).val())
 
-                html += '<tr> <td>' + element.nombre + '</td> <td>' + element.fecha + '</td> <td>' + element.descripcion + '</td>' +
+                html += '<tr> <td>' + element.nombre + '</td> <td>' + formatDate(date) + '</td> <td>' + element.descripcion + '</td>' +
                 ' <td>' + participantes + '</td> <td><img src="' + element.imagen + '" width="150px"></td> <td>' + notas + '</td>' +
                 ' <td>' + element.estado + '</td> </tr>';
             $("#personajes").html(html);

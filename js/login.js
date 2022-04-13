@@ -56,14 +56,14 @@ function tipoDeCuenta(cuenta){
 }
 
 $(document).ready(function(){
+    $('.inputlogin').bind('keypress', function (e) {
+        if (e.key === 'Enter') {
+            solicitar();
+        }
+    });
 });
 
 function deslogearse(){
     localStorage.clear();
 }
 
-$('.inputlogin').bind('keypress', function (e) {
-    if (e.key === 'Enter') {
-        solicitar();
-    }
-});

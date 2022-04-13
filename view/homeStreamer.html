@@ -43,13 +43,21 @@
 </nav>
 
     <section class="presentation container-fluid">
-      <div class="text-center titulo">
-        <h1>Evoluciona la manera
-            de conectar con tú comunidad</h1>
-        <p>Gestiona todos tus eventos con cada grupo <br>
-            de seguidores, a tan solo 3 clicks.</p>
-            <br>
-    </div>
+      <div id="banner">
+      </div>
+      <div class=".container-fluid row">
+        <div class="col-4 foto_perfil">
+
+        </div>
+        <div class="col-8 descripcion">
+            <div class="col-12 contenedor_descripcion">
+                <label for="descripcion" class="form-label"><b>Descripción de tu perfil</b></label>
+                <textarea class="form-control" id="descripcion" name="descripcion"
+                placeholder="Escribe sobre ti..."  required="" rows="5" autocomplete="off"></textarea>
+              <button class="btn btn-primary buttoninciar" onclick="ActualizarPerfil()"><b>Actualizar</b></button>
+            </div>
+        </div>
+      </div>
 
     </section>
     <a href="panelEvento.html"><button class=" btn btn-primary btn-lg botonlarge" onclick="">Administrar Eventos</button></a>

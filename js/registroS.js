@@ -1,5 +1,3 @@
-
-
 function registrar() {
     let txt_nombre = $("#nombre").val();
     let txt_correo = $("#correo").val();
@@ -9,7 +7,7 @@ function registrar() {
 
     $.ajax({
         url:'https://pruebauao.azurewebsites.net/streamers',   // url
-        dataType: 'text/json',
+        dataType: 'text',
         type: 'post',
         contentType: 'application/x-www-form-urlencoded',
         data: {
@@ -18,19 +16,28 @@ function registrar() {
             password: txt_contrasena,
             edad: txt_edad,
             pais: txt_pais,
-            foto_perfil: "",
+            foto_perfil: "../assets/img/collection/perfil/default_perfil.jpg",
             datos_perfil: "",
         },
         success: function( data, textStatus, jQxhr ){
-            correcto(true);
+            registrado();
         },
         error: function( jqXhr, textStatus, errorThrown ){
+            console.log( jqXhr);
         }
     });
 }
 
-function correcto(a){
-    if(a == true){
-        window.location.href = "http://127.0.0.1:5500/homeStreamer/homestreamer.html";
-    }
+function registrado(){
+    localStorage.user_name = $("#nombre").val();
+    localStorage.logeado = true;
+    localStorage.tipoCuenta = "streamer";
+    localStorage.correo = $("#correo").val();
+    window.location.href = 'configuracionS.html';
 }
+
+$(document).ready(function(){
+    $("form").submit(function(event) {
+        event.preventDefault();
+    })
+});
