@@ -2,19 +2,16 @@ function actualizar() {
     let txt_nombre = $("#nombre").val();
     let txt_fecha = $("#fecha").val();
     let txt_descripcion = $("#descripcion").val();
-    let txt_imagen = "../assets/img/123.jpg";
-    let txt_streamer = $("#streamer").val();
+
     $.ajax({
-        url:'https://pruebauao.azurewebsites.net/eventos',   // url
+        url:'https://pruebauao.azurewebsites.net/eventos/_id/' + localStorage.id,   // url
         dataType: 'text/json',
-        type: 'put',
+        type: 'PUT',
         contentType: 'application/x-www-form-urlencoded',
         data: {
             nombre: txt_nombre,
             fecha: txt_fecha,
             descripcion : txt_descripcion,
-            imagen: txt_imagen,
-            streamer: txt_streamer,
         }, // data to be submit
         success: function( data, textStatus, jQxhr ){
             alert("Guardado!!!");
@@ -29,13 +26,13 @@ function actualizar() {
 
 function cargar() {
     $.ajax({
-        url:'https://pruebauao.azurewebsites.net/eventos',   // url
+        url:'https://pruebauao.azurewebsites.net/eventos/_id/' + localStorage.id,   // url
         type: 'get',
         success: function( data, textStatus, jQxhr ){
             let i = 0;
             let html = "";
-            console.log(data);
-            data[0].forEach(element => {
+            console.log(data.eventos[0]);
+            element = data.eventos[0];
                 console.log(element);
                 i++;
                 if(element.Participantes === undefined){
@@ -50,25 +47,20 @@ function cargar() {
                 }
 
                 const formatDate = (date)=>{
-                    let formatted_date = date.getFullYear() + "-0" + date.getDate() + "-0" + (date.getMonth() + 1)
-                     return formatted_date;
-                    }
+                    let formatted_date = date.getFullYear() + "-0" + (date.getMonth() + 1) + "-" + (date.getDate() + 1)
+                    return formatted_date;
+                }
 
                 date = new Date(element.fecha);
                 console.log(formatDate(date));
                 $("#nombre").val(element.nombre);
                 $("#fecha").val(formatDate(date));
                 $("#descripcion").val(element.descripcion);
-                console.log($( "#participantes" ).val())
 
-                html += '<tr> <td>' + element.nombre + '</td> <td>' + element.fecha + '</td> <td>' + element.descripcion + '</td>' +
+                html += '<tr> <td>' + element.nombre + '</td> <td>' + formatDate(date) + '</td> <td>' + element.descripcion + '</td>' +
                 ' <td>' + participantes + '</td> <td><img src="' + element.imagen + '" width="150px"></td> <td>' + notas + '</td>' +
                 ' <td>' + element.estado + '</td> </tr>';
             $("#personajes").html(html);
-            });
-
-
-            
         },
         error: function( jqXhr, textStatus, errorThrown ){
             console.log( errorThrown );

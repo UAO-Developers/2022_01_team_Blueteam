@@ -3,8 +3,8 @@
     font-style:  normal;
     font-weight: 700;
     font-display: swap;
-    src: url("../assets/fonts/Inter-Bold.woff2") format("woff2"),
-         url("../assets/fonts/Inter-Bold.woff") format("woff");
+    src: url("/assets/font/Inter-Bold.woff2") format("woff2"),
+         url("/assets/font/Inter-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -12,14 +12,14 @@
     font-style:  normal;
     font-weight: 300;
     font-display: swap;
-    src: url("../assets/fonts/Inter-Light.woff2") format("woff2"),
-         url("../assets/fonts/Inter-Light.woff") format("woff");
+    src: url("/assets/font/Inter-Light.woff2") format("woff2"),
+         url("/assets/font/Inter-Light.woff") format("woff");
 }
 
 body{
     margin: 0;
     background-color: black;
-    background-image: url(../assets/pexels-matheus-bertelli-3856026.jpg);
+    background-image: url(/assets/img/admin/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }

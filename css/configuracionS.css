@@ -1,0 +1,28 @@
+.generaldiv {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding-left: 5%;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/img/admin/imglogin.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.loginfrom{
+    background-color: #fff;
+    padding: 32px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0, 0.2);
+    display: grid;
+}
+
+.buttoninciar{
+    margin-top: 20px;
+    margin-left: 50%;
+    width: 80%;
+    transform: translate(-50%, 0);
+}
